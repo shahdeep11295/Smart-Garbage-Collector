@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" >
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/refresh"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@drawable/quantum_ic_refresh_white_24"
+            app:backgroundTint="@color/cast_libraries_material_featurehighlight_outer_highlight_default_color" />
+
+    </fragment>
+
+
+    <CheckBox
+        android:text="Red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/red"
+        android:onClick="onCheckboxClicked"/>
+
+    <CheckBox
+        android:text="Blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/red"
+        android:layout_toEndOf="@+id/red"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:id="@+id/blue"
+        android:onClick="onCheckboxClicked"/>
+
+    <CheckBox
+        android:text="Green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/blue"
+        android:layout_toEndOf="@+id/blue"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:id="@+id/green"
+        android:onClick="onCheckboxClicked"/>
+    <ImageButton
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:text="Find path"
+        android:id="@+id/btnFindPath"
+        android:background="@drawable/send"
+        android:layout_toRightOf="@+id/green"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_alignBottom="@+id/green" />
+
+
+</RelativeLayout>
